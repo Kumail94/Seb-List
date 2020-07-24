@@ -1,0 +1,64 @@
+th {
+    text-align: center;
+}
+
+.table-responsive {
+    margin-top: 5px;
+    ;
+}
+
+input {
+    margin-left: 20px;
+    ;
+}
+
+#wrapper {
+    scroll-behavior: hidden;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+img {
+    height: 20px;
+    width: 25px;
+    position: fixed;
+    margin: auto;
+    text-align: center;
+}
+
+h3:hover {
+    background-color: #b9bfc6;
+    color: #ffff;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    color: #ffff;
+    background-color: #737f8c;
+    font: bold;
+    width: 230px;
+    margin-left: 0px;
+    padding: 5px;
+    ;
+}
+
+.white-box {
+    margin-left: 30px;
+    height: 500px;
+    width: 960px;
+}
+
+
+/* 
+li {
+    margin: 25px;
+    ;
+    text-decoration: none;
+} */

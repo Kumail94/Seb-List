@@ -1,0 +1,50 @@
+button {
+    background-color: #f33155;
+    border: 1px solid #f33155;
+    color: #ffff;
+    width: 90px;
+    height: 40px;
+}
+
+input {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font: bold;
+    color: #f33155;
+}
+
+.col-md-offset-3 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    height: auto;
+    /* width: auto;
+    display: block; */
+}
+
+p {
+    margin-top: 10px;
+    color: #8598A3;
+    float: left;
+}
+
+h6 {
+    margin-top: 10px;
+    float: right;
+}
+
+img {
+    margin: auto;
+    margin-top: 45px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.row {
+    margin-top: 250px;
+}
+
+h1 {
+    font-weight: bold;
+}

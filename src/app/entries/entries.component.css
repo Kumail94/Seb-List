@@ -1,0 +1,47 @@
+th {
+    text-align: center;
+}
+
+.table-responsive {
+    margin-top: 5px;
+}
+
+.white-box {
+    margin-left: 30px;
+    height: 500px;
+    width: 960px;
+}
+
+.heading {
+    text-align: center;
+    color: #ffff;
+    background-color: #737f8c;
+    font: bold;
+    width: 230px;
+    margin-left: 0px;
+    padding: 2px;
+    ;
+}
+
+h2:hover {
+    background-color: #b9bfc6;
+    cursor: pointer;
+}
+
+h3:hover {
+    background-color: #b9bfc6;
+    color: #ffff;
+    cursor: pointer;
+}
+
+h4:hover {
+    background-color: #737f8c;
+    color: #ffff;
+    cursor: pointer;
+}
+
+b:hover {
+    background-color: #b9bfc6;
+    color: #ffff;
+    cursor: pointer;
+}

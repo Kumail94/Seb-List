@@ -1,0 +1,201 @@
+        th {
+            text-align: center;
+        }
+        
+        span {
+            color: red;
+            margin: 5px;
+            ;
+        }
+        
+        label {
+            float: left;
+            margin-left: 10px;
+        }
+        
+        .btn.btn-default {
+            float: left;
+            background-color: #f33155;
+            color: #ffff;
+            margin: 5px;
+            padding: 8px;
+        }
+        /* Rounded sliders */
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked+.slider {
+            background-color: #00b007;
+        }
+        
+        input:focus+.slider {
+            box-shadow: 0 0 1px #00b007;
+        }
+        
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        
+        .sidebar {
+            overflow-y: hidden;
+        }
+        
+        #hr {
+            margin-top: 10px;
+        }
+        
+        #select {
+            background-color: #f33155;
+            color: #ffff;
+        }
+        
+        img {
+            height: 20px;
+            width: 25px;
+            position: fixed;
+            margin: auto;
+            text-align: center;
+        }
+        
+        #select {
+            float: right;
+        }
+        
+        .modal-footer {
+            background-color: #ecedef;
+        }
+        
+        #close {
+            float: right;
+            background-color: rgba(0, 0, 0, 0.025);
+            color: black;
+        }
+        
+        .modal-dialog {
+            width: 960px;
+            height: 500px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            bottom: 0px;
+            right: 10px;
+        }
+        
+        .modal-dialog {
+            width: 960px;
+            height: 500px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            bottom: 0px;
+            right: 10px;
+        }
+        
+        label {
+            position: relative;
+            font-weight: bold;
+            color: #576575;
+        }
+        
+        .modal-dialog .modal-content {
+            height: 600px;
+        }
+        
+        #card-header {
+            background-color: #F1F5F8;
+            border: 2px solid #F1F5F8;
+            border-radius: 35px;
+            height: 45px;
+        }
+        
+        #asset {
+            background-color: #fafafa;
+        }
+        
+        .card {
+            height: 280px;
+            opacity: 1;
+            background-color: #fafafa;
+            border-radius: 20px;
+        }
+        
+        #content {
+            height: 500px;
+            top: 50px;
+            left: 20px;
+        }
+        
+        #modal-dialog {
+            height: 500px;
+            top: 50px;
+            left: 20px;
+        }
+        
+        .modal-footer {
+            background-color: #fafafa;
+        }
+        
+        #newPlace {
+            color: #ffff;
+            float: left;
+            background-color: grey;
+        }
+        
+        #myElementId {
+            margin-left: 35px;
+            width: 9060px;
+        }
+        
+        #a {
+            margin-left: 15px;
+        }
+        
+        #t {
+            float: left;
+            margin-left: 20px;
+        }

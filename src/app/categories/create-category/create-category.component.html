@@ -1,0 +1,240 @@
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="30" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Wrapper -->
+<!-- ============================================================== -->
+<div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- End Top Navigation -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav slimscrollsidebar">
+            <div class="sidebar-head">
+                <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Seb's
+                        List</span></h3>
+            </div>
+            <ul class="nav" id="side-menu">
+                <li style="padding: 70px 0 0;">
+                    <a (click)="onEntries()" class="waves-effect"><i class="fa fa-clock-o fa-fw"
+                            aria-hidden="true"></i>Entries</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onAssets()" class="waves-effect"><i class="fa fa-user fa-fw"
+                            aria-hidden="true"></i>Assets</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onCategories()" class="waves-effect"><i class="fa fa-folder-o fa-fw"
+                            aria-hidden="true"></i>Categories</a>
+                </li>
+                <hr>
+            </ul>
+            <div class="center p-20">
+                <!-- <a href="#" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Upgrade to Pro</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page Content -->
+    <!-- ============================================================== -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Categories</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <!-- <a href="#" target="_blank" class="btn btn-danger btn-sm pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">
+                        <div class="fa fa-plus">&nbsp;Save</div><button class="btn btn-danger btn-xs" style="margin-left:15px">
+                            <div class="glyphicon glyphicon-menu-down">&nbsp;</div>
+                        </button>
+                    </a> -->
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;width:35px;">
+                        <div class="glyphicon glyphicon-menu-down">&nbsp;</div>
+                    </button>
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;">Save</button>
+                    <ol class="breadcrumb">
+                        <!-- <li><a href="#">Dashboard</a></li>
+                        <li class="active">Basic Table</li> -->
+                    </ol>
+                </div>
+                <!-- /.col-lg-12 -->
+
+            </div>
+            <!-- /row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5 class="heading">Categories > Place Category ></h5>
+                    <h2 class="heading"><b>Create a new category</b></h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <form class="form-horizontal form-material" (ngSubmit)="onSubmit(createCategory)" #createCategory="ngForm">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label style="float: left;">Title<span style="color: red;"> *
+                                                </span></label>
+                                            <input type="text" class="form-control form-control-line" autocomplete="off" ngModel name="title" required>
+                                            <span style="color: red;">{{error}}</span>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="btn btn-danger btn-sm pull-right" style="margin:5px;width:35px;"><div class="glyphicon glyphicon-menu-down">&nbsp;</div></button> -->
+                                    <button type="submit" class="btn btn-danger btn-sm pull-right" style="margin:5px;" [disabled]="!createCategory.valid">Save</button>
+                                </div>
+                            </form>
+                            <!-- <div class="table-responsive">
+                                    <table class="table table-xs">
+                                        <thead>
+                                            <tr>
+                                                <th id="t">Title</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th>
+                                                    <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="fa fa-circle" style="color: #27AE60;">&nbsp;
+                                                            </div>
+                                                            <a>&nbsp;Activity</a>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="fa fa-circle" style="color: #27AE60;">&nbsp;
+                                                            </div>
+                                                            <a>&nbsp;Places</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="fa fa-circle" style="color: #27AE60;">&nbsp;
+                                                            </div>
+                                                            <a>&nbsp;Places</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="fa fa-circle" style="color: #27AE60;">&nbsp;
+                                                            </div>
+                                                            <a>&nbsp;Foods</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <input type="checkbox">
+                                                        </div>
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="col-sm-4">
+                                                            <div class="fa fa-circle" style="color: #27AE60;">&nbsp;
+                                                            </div>
+                                                            <a>&nbsp;Drinks</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe">&nbsp;</div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2020 &copy; Seb-s List brought to you by techadwiser.com</footer>
+    </div>
+    <!-- /#page-wrapper -->
+</div>

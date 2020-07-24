@@ -1,0 +1,145 @@
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="30" cy="30" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Wrapper -->
+<!-- ============================================================== -->
+<div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- End Top Navigation -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav slimscrollsidebar">
+            <div class="sidebar-head">
+                <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Seb's
+                        List</span></h3>
+            </div>
+            <ul class="nav" id="side-menu">
+                <li style="padding: 70px 0 0;">
+                    <a (click)="onEntries()" class="waves-effect"><i class="fa fa-clock-o fa-fw"
+                            aria-hidden="true"></i>Entries</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onAssets()" class="waves-effect"><i class="fa fa-user fa-fw"
+                            aria-hidden="true"></i>Assets</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onCategories()" class="waves-effect"><i class="fa fa-folder-o fa-fw"
+                            aria-hidden="true"></i>Categories</a>
+                </li>
+                <hr>
+            </ul>
+            <div class="center p-20">
+                <!-- <a href="#" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">
+                    <div class="fa fa-plus">&nbsp; New entry</div>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page Content -->
+    <!-- ============================================================== -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Assets</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <a href="#" target="_blank" class="btn btn-danger btn-sm pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">
+                        <div class="fa fa-upload">&nbsp;Upload files</div>
+
+                    </a>
+                    <ol class="breadcrumb">
+                        <!-- <li><a href="#">Dashboard</a></li>
+                        <li class="active">Basic Table</li> -->
+                    </ol>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+                <div class="col-sm-2">
+                    <h3 class="heading"><b>Images</b></h3>
+                    <h4 class="text-center" style="color: #737f8c">Temporary Upload</h4>
+                </div>
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="white-box">
+                                <form role="search">
+                                    <div class="row">
+                                        <div class="col-sm-1" style="margin-top:5px">
+                                            <button type="button" class="btn btn-secondary" style="background-color: #fafafafa;">&nbsp;<input type="checkbox"></button>
+                                        </div>
+                                        <div class="col-sm-1" style="margin-top:5px">
+                                            <button type="button" class="btn btn-secondary" style="background-color: #fafafafa; color: #29323D;width: 65px;">&nbsp;All&nbsp;&nbsp;<div class="glyphicon glyphicon-menu-down">&nbsp;</div></button>
+                                        </div>
+
+                                        <div class="col-sm-7">
+                                            <input type="text" placeholder="Search..." style="margin-top:5px" class="form-control fa fa-search">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <button class="btn btn-default" style="background-color: #fafafafa; color: #29323D; width: 100px;"><div class="glyphicon glyphicon-sort-by-attributes-alt">&nbsp;Title</div>&nbsp;&nbsp;<div class="glyphicon glyphicon-menu-down">&nbsp;</div></button>
+                                                    <button data-view='table' class="btn btn-default" style="background-color: #fafafafa; color: #29323D; width:30px; padding: 5px;margin: 8px;" data-icon='list'><div class="glyphicon glyphicon-th-list" style="text-align: center;">&nbsp;</div></button>
+                                                    <button data-view='thumbs' class="btn btn-default" style="background-color: #fafafafa; color: #29323D; width: 30px; padding: 5px;margin: 5px;;" data-icon="grid"><div class="glyphicon glyphicon-th" style="text-align: center;">&nbsp;</div></button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- <h3 class="box-title">Basic Table</h3>
+                        <p class="text-muted">Add class <code>.table</code></p> -->
+                                <div class="table-responsive">
+                                    <table class="table table-xs">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Title</th>
+                                                <th>File Name</th>
+                                                <th>File Size</th>
+                                                <th>File Modify Date</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let asset of assets; let i = index">
+                                                <td><input type="checkbox"></td>
+                                                <td><img src='{{asset.title}}'></td>
+                                                <td>{{asset.fileName}}</td>
+                                                <td>{{asset.fileSize}}</td>
+                                                <td>
+                                                    {{asset.fileModifiedDate | date}}
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer"> 2020 &copy; Seb-s List brought to you by techadwiser.com</footer>
+    </div>
+    <!-- /#page-wrapper -->
+</div>

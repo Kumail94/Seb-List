@@ -1,0 +1,90 @@
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="30" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Wrapper -->
+<!-- ============================================================== -->
+<div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- End Top Navigation -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav slimscrollsidebar">
+            <div class="sidebar-head">
+                <div class="dropdown">
+                    <h3 class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span>Seb's List &nbsp;
+                        <span class="caret"></span></h3>
+                    <ul class="dropdown-menu">
+                        <li><a (click)="onLogout()">Logout</a></li>
+                    </ul>
+                </div>
+
+                <!-- <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span>Seb's List &nbsp; <span data-icon="downangle"></span></h3> -->
+            </div>
+            <ul class="nav" id="side-menu">
+                <li style="padding: 70px 0 0;">
+                    <a (click)="onEntries()" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Entries</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onAssets()" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Assets</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onCategories()" class="waves-effect"><i class="fa fa-folder-o fa-fw" aria-hidden="true"></i>Categories</a>
+                </li>
+                <hr>
+            </ul>
+            <!-- <div class="center p-20">
+                <a href="#" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">
+
+                </a>
+            </div> -->
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page Content -->
+    <!-- ============================================================== -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Dash board</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <!-- <a href="#" target="_blank" class="btn btn-danger btn-sm pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"> -->
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;width:30px;"><div class="fa fa-cog">&nbsp;</div></button>
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;"><div class="fa fa-plus">&nbsp; New Widget</div>&nbsp;Save</button>
+                    <!-- </a> -->
+                    <ol class="breadcrumb">
+                        <!-- <li><a href="#">Dashboard</a></li>
+                        <li class="active">Blank Page</li> -->
+                    </ol>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white-box">
+                        <h3 class="box-title">Wellcome to Seb's List</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2020 &copy; Seb Admin brought to you by techadwiser.com </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page Content -->
+    <!-- ============================================================== -->
+</div>

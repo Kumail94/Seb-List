@@ -1,0 +1,200 @@
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="30" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Wrapper -->
+<!-- ============================================================== -->
+<div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    <!-- End Top Navigation -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav slimscrollsidebar">
+            <div class="sidebar-head">
+                <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Seb's
+                        List</span></h3>
+            </div>
+            <ul class="nav" id="side-menu">
+                <li style="padding: 70px 0 0;">
+                    <a (click)="onEntries()" class="waves-effect"><i class="fa fa-clock-o fa-fw"
+                            aria-hidden="true"></i>Entries</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onAssets()" class="waves-effect"><i class="fa fa-user fa-fw"
+                            aria-hidden="true"></i>Assets</a>
+                </li>
+                <hr>
+                <li>
+                    <a (click)="onCategories()" class="waves-effect"><i class="fa fa-folder-o fa-fw"
+                            aria-hidden="true"></i>Categories</a>
+                </li>
+                <hr>
+            </ul>
+            <div class="center p-20">
+                <!-- <a href="#" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">
+                    <div class="fa fa-plus">&nbsp; New entry</div>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page Content -->
+    <!-- ============================================================== -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Entries</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <!-- <a href="#" class="btn btn-danger btn-sm dropdown-toggle pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;width:35px;"><div class="glyphicon glyphicon-menu-down">&nbsp;</div></button>
+                    <button class="btn btn-danger btn-sm pull-right" style="margin:5px;"><div class="fa fa-plus" (click)="onNewEntry()">&nbsp;New Entry</div></button>
+
+                    <ol class="breadcrumb">
+                        <!-- <li><a href="#">Dashboard</a></li>
+                        <li class="active">Basic Table</li> -->
+                    </ol>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /row -->
+            <div class="row">
+                <div class="col-sm-2">
+                    <h2 class="heading"><b>Place Category</b></h2>
+                    <h3 class="text-center" style="color: #b9bfc6;"><b>CHANNELS</b></h3>
+                    <h4 class="text-center">Places</h4>
+                </div>
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="white-box">
+                                <form role="search">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <button class="btn btn-secondary" style="background-color: #fafafafa; color: #29323D;"><input
+                                                    type="checkbox"></button> &nbsp;&nbsp; <button class="btn btn-secondary" style="background-color: #fafafafa; color: #29323D;width: 72px;">&nbsp;All&nbsp;&nbsp;
+                                                <div class="glyphicon glyphicon-menu-down">&nbsp;</div></button>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" placeholder="Search..." class="form-control fa fa-search"></div>
+                                        <div class="col-sm-2">
+                                            <button class="btn btn-default" style="background-color: #fafafafa; color: #29323D; width: 140px;margin-top: 5px;">
+                                                <div class="glyphicon glyphicon-sort-by-attributes-alt">&nbsp;Post Date
+                                                </div>&nbsp;&nbsp;<div class="glyphicon glyphicon-menu-down">&nbsp;
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="table-responsive">
+                                    <table class="table table-xs">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Section</th>
+                                                <th>Post Date</th>
+                                                <th>Expiry Date</th>
+                                                <th>
+                                                    <div class="glyphicon glyphicon-globe"></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody *ngFor="let asset of assets; let i = index">
+                                            <tr>
+                                                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;
+                                                    <div class="fa fa-circle" style="color: #00b007;">
+                                                    </div>&nbsp;&nbsp;Abc
+                                                </td>
+                                                <td>Deshmukh</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td data-title="Link" data-attr="link">
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <!-- <tr>
+                                                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;
+                                                    <div class="fa fa-circle" style="color: #00b007;"></div>
+                                                    &nbsp;&nbsp;def
+                                                </td>
+                                                <td>Deshmukh</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td data-title="Link" data-attr="link">
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;
+                                                    <div class="fa fa-circle" style="color: #00b007;"></div>
+                                                    &nbsp;&nbsp;ghi
+                                                </td>
+                                                <td>Deshmukh</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td data-title="Link" data-attr="link">
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;
+                                                    <div class="fa fa-circle" style="color: #00b007;"></div>
+                                                    &nbsp;&nbsp;jkl
+                                                </td>
+                                                <td>Deshmukh</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td data-title="Link" data-attr="link">
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;
+                                                    <div class="fa fa-circle" style="color: #00b007;"></div>
+                                                    &nbsp;&nbsp;mno
+                                                </td>
+                                                <td>Deshmukh</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td>{{asset.fileModifiedDate | date}}</td>
+                                                <td data-title="Link" data-attr="link">
+                                                    <a href="#" rel="noopener" target="_blank" data-icon="world" title="Visit webpage">
+                                                        <div class="glyphicon glyphicon-globe"></div>
+                                                    </a>
+                                                </td>
+                                            </tr> -->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2020 &copy; Seb-s List brought to you by techadwiser.com</footer>
+    </div>
+    <!-- /#page-wrapper -->
+</div>
